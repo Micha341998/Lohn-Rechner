@@ -1,0 +1,45 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lohnrechner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Lohnrechner</h1>
+        <div class="input-group">
+            <label for="hourlyRate">Stundenlohn (CHF):</label>
+            <input type="number" id="hourlyRate" min="0" step="0.01">
+        </div>
+        <div class="input-group">
+            <label for="hoursWorked">Geleistete Stunden:</label>
+            <input type="number" id="hoursWorked" min="0" step="0.5">
+        </div>
+        <div class="input-group">
+            <label for="vacationRate">Ferienzuschlag pro Stunde (CHF):</label>
+            <input type="number" id="vacationRate" min="0" step="0.01">
+        </div>
+        <button id="calculate">Berechnen</button>
+        <div class="results">
+            <div class="result">
+                <h2>Brutto-Lohn:</h2>
+                <span id="grossSalary">CHF 0.00</span>
+            </div>
+            <div class="result">
+                <h2>Abzüge (10.316%):</h2>
+                <span id="deductions">CHF 0.00</span>
+            </div>
+            <div class="result">
+                <h2>Netto-Lohn:</h2>
+                <span id="netSalary" class="net-salary">CHF 0.00</span>
+            </div>
+            <div class="result">
+                <h2>Ferienzuschlag:</h2>
+                <span id="vacationPay">CHF 0.00</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
